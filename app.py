@@ -1,6 +1,8 @@
 import os
+import logging
 import random
 import string
+import sys
 from flask import Flask
 from flask_restful import Api, reqparse
 from pymongo import MongoClient
@@ -23,6 +25,18 @@ db = client[os.environ['MONGO_DBNAME']]
 api.add_resource(
     RecordSearch, '/suggestions/', resource_class_kwargs={'db' : db}
 )
+
+# Configure logging.
+app.logger.setLevel(logging.DEBUG)
+del app.logger.handlers[:]
+
+handler = logging.StreamHandler(stream=sys.stdout)
+handler.setLevel(logging.DEBUG)
+handler.formatter = logging.Formatter(
+    fmt=u"%(asctime)s level=%(levelname)s %(message)s",
+    datefmt="%Y-%m-%dT%H:%M:%SZ",
+)
+app.logger.addHandler(handler)
 
 if __name__ == '__main__':
     app.run(host="0.0.0.0", port=8080, debug=True)

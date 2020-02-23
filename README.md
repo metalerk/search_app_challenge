@@ -97,24 +97,24 @@ Design a REST API endpoint that provides auto-complete suggestions from a list o
 
 **Environment**
 
-´´´bash
+```bash
 $ virtualenv -p python3 env
 $ source env/bin/activate
-´´´
+```
 
 **Run**
 
 *Development*
 
-´´´bash
+```bash
 $ aufziehen dev
-´´´
+```
 
 *Production*
 
-´´´bash
+```bash
 $ aufziehen prod
-´´´
+```
 
 ## Endpoint
 

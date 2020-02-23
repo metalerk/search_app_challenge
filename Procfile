@@ -1,1 +1,1 @@
-web: gunicorn -w4 app:app
+web: gunicorn -w1 --access-logfile - app:app 

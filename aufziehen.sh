@@ -36,6 +36,6 @@ elif [ "$1" == "prod" ]; then
 else
 	echo "Invalid option."
 	echo
-	echo "usage: ./start_dev.sh test|dev|prod"
+	echo "usage: ./aufziehen.sh test|dev|prod"
 
 fi

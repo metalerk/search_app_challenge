@@ -104,16 +104,16 @@ $ source env/bin/activate
 
 **Run**
 
-_Development_
+*Development*
 
 ´´´bash
-\$ aufziehen dev
+$ aufziehen dev
 ´´´
 
-_Production_
+*Production*
 
 ´´´bash
-\$ aufziehen prod
+$ aufziehen prod
 ´´´
 
 ## Endpoint

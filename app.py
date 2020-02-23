@@ -18,7 +18,7 @@ app.config['SECRET_KEY'] = ''.join(random.SystemRandom().choice(string.ascii_upp
     for _ in range(50))
 
 # Connection parameters are read from .env file
-client = MongoClient(os.environ['MONGO_URI'])
+client = MongoClient(os.environ['MONGODB_URI'])
 db = client[os.environ['MONGO_DBNAME']]
 
 # db is the pymongo cursor and it is passed to each endpoint, also the parser to read GET and POST parameters
